@@ -1,97 +1,217 @@
 <html>
 <head>
-<style>
-.countup {
-  text-align: center;
-  margin-bottom: 20px;
-}
-.countup .timeel {
-  display: inline-block;
-  padding: 10px;
-  background: #151515;
-  margin: 0;
-  color: white;
-  min-width: 2.6rem;
-  margin-left: 13px;
-  border-radius: 10px 0 0 10px;
-}
-.countup span[class*="timeRef"] {
-  border-radius: 0 10px 10px 0;
-  margin-left: 0;
-  background: #e8c152;
-  color: black;
-}
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-.text {
-  text-align: center;
-  margin-bottom: 20px;
-}
+        html {
+            background-color: #1a1a1a;
+            color: whitesmoke;
+            font-family: 'Lato', sans-serif
+        }
 
-.meme {
- display: table-cell;
-	margin-left: auto;
-	margin-right: auto;
-}
+        .counters > div {
+            width: 100%;
+        }
+        .meme {
+            display: flex;
+            justify-content: center;
+            margin: 10vh;
+            flex-wrap: wrap;
+        }
 
-</style>
-	<title>OFFICE-HOURS</title>
+        h1 {
+            font-size: 5rem;
+        }
+        img {
+            margin: 1vh 1vh
+        }
+
+        .countup {
+            margin: 10vh 0
+        }
+
+        h2 {
+            padding-bottom: 2vh;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+        }
+
+        .days, .hours, .minutes, .seconds {
+            border: 1px solid rgba(255, 255, 255, 0.5)
+        }
+
+        .timeRefDays, .timeRefHours, .timeRefMinutes, .timeRefSeconds {
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            background: #2a2a2a !important;
+            color: whitesmoke !important;
+            text-transform: capitalize
+        }
+
+        .countup {
+            text-align: center;
+            margin-bottom: 20px
+        }
+
+        .countup .timeel {
+            display: inline-block;
+            padding: 10px;
+            background: #151515;
+            margin: 0;
+            color: #fff;
+            min-width: 2.6rem;
+            margin-left: 13px;
+            border-radius: 10px 0 0 10px
+        }
+
+        .countup span[class*="timeRef"] {
+            border-radius: 0 10px 10px 0;
+            margin-left: 0;
+            background: #e8c152;
+            color: black
+        }
+
+        .text {
+            text-align: center;
+            margin-bottom: 20px
+        }
+
+        .meme > img {
+            flex: 1 0 21%;
+            margin: 1vw;
+            cursor: pointer;
+        }
+
+        .title {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+        }
+
+        .counters {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .preview {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            backdrop-filter: blur(12px);
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .previewimg {
+            height: 90vh;
+            width: auto;
+            box-shadow: 0px 0px 1vw #111111;
+        }
+
+    </style>
+    <title>Office Hours</title>
 </head>
 <body>
-<div class="countup" id="countup1">
-	<h2>Time since last Office-Hours</h2>
-  <span class="timeel days">00</span>
-  <span class="timeel timeRefDays">days</span>
-  <span class="timeel hours">00</span>
-  <span class="timeel timeRefHours">hours</span>
-  <span class="timeel minutes">00</span>
-  <span class="timeel timeRefMinutes">minutes</span>
-  <span class="timeel seconds">00</span>
-  <span class="timeel timeRefSeconds">seconds</span>
+<div class="preview" id="previewbg">
+    <img src="" alt="" class="previewimg" id="previewimg">
 </div>
-<div class="countup" id="countup2">
-	<h2>Time since last ASMR dryzwiebel-time</h2>
-  <span class="timeel days">00</span>
-  <span class="timeel timeRefDays">days</span>
-  <span class="timeel hours">00</span>
-  <span class="timeel timeRefHours">hours</span>
-  <span class="timeel minutes">00</span>
-  <span class="timeel timeRefMinutes">minutes</span>
-  <span class="timeel seconds">00</span>
-  <span class="timeel timeRefSeconds">seconds</span>
+<div class="title">
+    <h1>Golf Hours</h1>
 </div>
+<div class="counters">
+    <div class="countup" id="countup1">
+        <h2>Time since last Office-Hours</h2>
+        <span class="timeel days">00</span>
+        <span class="timeel timeRefDays">days</span>
+        <span class="timeel hours">00</span>
+        <span class="timeel timeRefHours">hours</span>
+        <span class="timeel minutes">00</span>
+        <span class="timeel timeRefMinutes">minutes</span>
+        <span class="timeel seconds">00</span>
+        <span class="timeel timeRefSeconds">seconds</span>
+    </div>
+    <div class="countup" id="countup2">
+        <h2>Time since last ASMR dryzwiebel-time</h2>
+        <span class="timeel days">00</span>
+        <span class="timeel timeRefDays">days</span>
+        <span class="timeel hours">00</span>
+        <span class="timeel timeRefHours">hours</span>
+        <span class="timeel minutes">00</span>
+        <span class="timeel timeRefMinutes">minutes</span>
+        <span class="timeel seconds">00</span>
+        <span class="timeel timeRefSeconds">seconds</span>
+    </div>
+</div>
+
 <div class="meme">
-	<img src="meme1.png" style="width: 30vw;">
-	<img src="meme2.png" style="width: 30vw;">
-	<img src="meme3.png" style="width: 30vw;">
-	</div>
+    <img src="img/meme1.png" style="width: 30vw;">
+    <img src="img/meme2.png" style="width: 30vw;">
+    <img src="img/meme3.png" style="width: 30vw;">
+</div>
 </body>
 </html>
 
 
 <script>
-window.onload = function() {
-  // Month Day, Year Hour:Minute:Second, id-of-element-container
-setInterval(function(){ countUpFromTime("Apr 14, 2021 22:30:00 UTC+2", 'countup1'); }, 1000);
-setInterval(function(){ countUpFromTime("May 28, 2021 23:50:00 UTC+2", 'countup2'); }, 1000);
-};
-function countUpFromTime(countFrom, id) {
-  countFrom = new Date(countFrom).getTime();
-  var now = new Date(),
-      countFrom = new Date(countFrom),
-      timeDifference = (now - countFrom);
-    
-  var secondsInADay = 60 * 60 * 1000 * 24,
-      secondsInAHour = 60 * 60 * 1000;
-    
-  days = Math.floor(timeDifference / (secondsInADay) * 1);
-  hours = Math.floor((timeDifference % (secondsInADay)) / (secondsInAHour) * 1);
-  mins = Math.floor(((timeDifference % (secondsInADay)) % (secondsInAHour)) / (60 * 1000) * 1);
-  secs = Math.floor((((timeDifference % (secondsInADay)) % (secondsInAHour)) % (60 * 1000)) / 1000 * 1);
+    var isPreviewHidden = true
 
-  var idEl = document.getElementById(id);
-  idEl.getElementsByClassName('days')[0].innerHTML = days;
-  idEl.getElementsByClassName('hours')[0].innerHTML = hours;
-  idEl.getElementsByClassName('minutes')[0].innerHTML = mins;
-  idEl.getElementsByClassName('seconds')[0].innerHTML = secs;
-}
+    var previewbg = document.getElementById('previewbg')
+    var previewimg = document.getElementById('previewimg')
+
+    //var imgs = document.getElementsByTagName('img')
+
+    window.onload = function () {
+        // Month Day, Year Hour:Minute:Second, id-of-element-container
+        setInterval(function () {
+            countUpFromTime("Apr 14, 2021 22:30:00 UTC+2", 'countup1');
+        }, 1000);
+        setInterval(function () {
+            countUpFromTime("May 28, 2021 23:50:00 UTC+2", 'countup2');
+        }, 1000);
+
+        for (let i = 0; i < document.getElementsByTagName('img').length; i++) {
+            document.getElementsByTagName('img')[i].addEventListener('click' , function() {
+                isPreviewHidden = false
+                previewbg.style.display = 'flex'
+                previewimg.src = this.src
+            })
+        }
+    };
+
+
+    previewbg.addEventListener('click', () => {
+        if (!isPreviewHidden) {
+            previewbg.style.display = 'none'
+            isPreviewHidden = true
+        }
+    })
+
+    function countUpFromTime(countFrom, id) {
+        countFrom = new Date(countFrom).getTime();
+        var now = new Date(),
+            countFrom = new Date(countFrom),
+            timeDifference = (now - countFrom);
+
+        var secondsInADay = 60 * 60 * 1000 * 24,
+            secondsInAHour = 60 * 60 * 1000;
+
+        days = Math.floor(timeDifference / (secondsInADay) * 1);
+        hours = Math.floor((timeDifference % (secondsInADay)) / (secondsInAHour) * 1);
+        mins = Math.floor(((timeDifference % (secondsInADay)) % (secondsInAHour)) / (60 * 1000) * 1);
+        secs = Math.floor((((timeDifference % (secondsInADay)) % (secondsInAHour)) % (60 * 1000)) / 1000 * 1);
+
+        var idEl = document.getElementById(id);
+        idEl.getElementsByClassName('days')[0].innerHTML = days;
+        idEl.getElementsByClassName('hours')[0].innerHTML = hours;
+        idEl.getElementsByClassName('minutes')[0].innerHTML = mins;
+        idEl.getElementsByClassName('seconds')[0].innerHTML = secs;
+    }
 </script>
