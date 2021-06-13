@@ -8,7 +8,9 @@
             }
 
             h2 {
-                font-size: 2.5rem;
+                font-size: 3.25rem;
+                color: #cccccc;
+                text-shadow: #1b1b1ba1 5px 5px;
             }
 
             .counters {
@@ -17,9 +19,17 @@
                 flex-wrap: wrap;
             }
 
+            .content {
+                background: #000000; 
+                background: #000000ab;
+                width: 100%;
+                padding: 1vh;
+                border-radius: 15px;
+            }
+
         }
         html {
-            background-color: #1a1a1a;
+            background-color: #1b1b1b;
             color: whitesmoke;
             font-family: 'Lato', sans-serif
         }
@@ -47,7 +57,7 @@
 
         h2 {
             padding-bottom: 2vh;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+            border-bottom: 1px solid #ffffff00;
         }
 
         .days, .hours, .minutes, .seconds {
@@ -131,7 +141,7 @@
             box-shadow: 0px 0px 1vw #111111;
         }
         body {
-            background-image: url(./riot_golf.png);
+            background-image: url(./img/riot_golf.png);
             background-repeat: no-repeat;
             background-position: center;
             background-attachment: fixed;
@@ -149,26 +159,30 @@
 </div>
 <div class="counters">
     <div class="countup" id="countup1">
-        <h2>Time since last Office-Hours</h2>
-        <span class="timeel days">00</span>
-        <span class="timeel timeRefDays">days</span>
-        <span class="timeel hours">00</span>
-        <span class="timeel timeRefHours">hours</span>
-        <span class="timeel minutes">00</span>
-        <span class="timeel timeRefMinutes">minutes</span>
-        <span class="timeel seconds">00</span>
-        <span class="timeel timeRefSeconds">seconds</span>
+        <div class="content">
+            <h2>Time since last Office-Hours</h2>        
+            <span class="timeel days">00</span>
+            <span class="timeel timeRefDays">days</span>
+            <span class="timeel hours">00</span>
+            <span class="timeel timeRefHours">hours</span>
+            <span class="timeel minutes">00</span>
+            <span class="timeel timeRefMinutes">minutes</span>
+            <span class="timeel seconds">00</span>
+            <span class="timeel timeRefSeconds">seconds</span>
+        </div>
     </div>
     <div class="countup" id="countup2">
-        <h2>Time since last ASMR dryzwiebel-time</h2>
-        <span class="timeel days">00</span>
-        <span class="timeel timeRefDays">days</span>
-        <span class="timeel hours">00</span>
-        <span class="timeel timeRefHours">hours</span>
-        <span class="timeel minutes">00</span>
-        <span class="timeel timeRefMinutes">minutes</span>
-        <span class="timeel seconds">00</span>
-        <span class="timeel timeRefSeconds">seconds</span>
+        <div class="content">
+            <h2>Time since last ASMR dryzwiebel-time</h2>
+            <span class="timeel days">00</span>
+            <span class="timeel timeRefDays">days</span>
+            <span class="timeel hours">00</span>
+            <span class="timeel timeRefHours">hours</span>
+            <span class="timeel minutes">00</span>
+            <span class="timeel timeRefMinutes">minutes</span>
+            <span class="timeel seconds">00</span>
+            <span class="timeel timeRefSeconds">seconds</span>
+        </div>  
     </div>
 </div>
 
